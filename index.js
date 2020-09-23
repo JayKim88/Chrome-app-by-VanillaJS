@@ -1,32 +1,19 @@
 const title = document.querySelector("#title");
 
-const BASE_COLOR = "rgb(52, 73, 94)";
-const OTHER_COLOR = "rgb(142, 68, 173)"
+const CLICKED_CLASS = "clicked";
 
 function handleClick(){
-    const currentColor = title.style.color;
-    if (currentColor === BASE_COLOR){
-        title.style.color = OTHER_COLOR;
+    const hasClass = title.classList.contains(CLICKED_CLASS);
+    // contains 는 해당 클래스가 있는지 확인한다. 없을땐 add, 있을땐 remove.  
+    if (hasClass){
+        title.classList.remove(CLICKED_CLASS);
     } else {
-        title.style.color = BASE_COLOR;
+        title.classList.add(CLICKED_CLASS);
     }
 }
 
 function init(){
-    title.style.color = BASE_COLOR;
-    title.addEventListener("mouseenter", handleClick);    
+    title.addEventListener("click", handleClick);
 }
 
 init();
-
-function handleOnline() {
-    console.log("you are using Internet!");
-}
-
-function handleOffline() {
-    console.log("you are out of internet!");
-}
-
-
-window.addEventListener("online", handleOnline);
-window.addEventListener("offline", handleOffline);
