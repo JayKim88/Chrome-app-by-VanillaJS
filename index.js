@@ -3,13 +3,8 @@ const title = document.querySelector("#title");
 const CLICKED_CLASS = "clicked";
 
 function handleClick(){
-    const hasClass = title.classList.contains(CLICKED_CLASS);
-    // contains 는 해당 클래스가 있는지 확인한다. 없을땐 add, 있을땐 remove.  
-    if (hasClass){
-        title.classList.remove(CLICKED_CLASS);
-    } else {
-        title.classList.add(CLICKED_CLASS);
-    }
+   title.classList.toggle(CLICKED_CLASS);
+// class가 있다면 remove. 없다면 add 하는 메소드.
 }
 
 function init(){
