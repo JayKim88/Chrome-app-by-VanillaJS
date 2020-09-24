@@ -1,16 +1,24 @@
 body {
-  background-color: peru;  
+  background-color:#ecf0f1;  
 }
 
 .btn {
   cursor: pointer;
 }
 
-h1 {
-  color: darkcyan;
-  transition: color 0.5s ease-in-out
+body {
+  color:#34495e;
 }
 
 .clicked {
   color: darkred
+}
+
+.form, 
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
 }
